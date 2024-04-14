@@ -13,7 +13,7 @@ prev.addEventListener("click",()=>{
     counter--;
     if(counter>=0)
     {
-         console.log(counter);
+        //  console.log(counter);
          sliding();
     }
     else{
@@ -27,7 +27,7 @@ prev.addEventListener("click",()=>{
 next.addEventListener("click",()=>{
     counter++;
     if(counter<=banner.length-1){
-        console.log(counter);
+        // console.log(counter);
         sliding();
     }
     else{
@@ -54,13 +54,120 @@ function autostartscroll(){
     autoscroll=setInterval(()=>{
                counter++;
                if(counter<=banner.length-1 && clicked===false){
-                   console.log(counter);
+                //    console.log(counter);
                    sliding();
                }
                else{
                    counter--;
                    clearInterval(autoscroll);
                }
-           },2000)
+           },5000)
 }
+
+
+
+// next course card adjustment............................................................................................
+let windowsize;
+let cardbox=document.querySelectorAll(".swiper-col");
+let dotbtn=document.querySelectorAll(".mydotbtn");
+let sum=0;
+
+
+for(i=0; i<5; i++){
+    cardbox[i].style.left=`${i*33}%`;
+   }
+
+   dotbtn.forEach((btn,index)=>{
+    btn.addEventListener("click",()=>{
+
+        dotbtn.forEach(btn => {
+            btn.classList.remove("btncolor");
+        });
+      btn.classList.add("btncolor")
+        sum=index;
+        slidebox();
+        console.log(sum);
+    })
+    
+})
+
+
+function slidebox(){
+    
+          cardbox.forEach(box => {
+            box.style.transform=`translateX(-${sum*100}%)`;
+
+        });
+       }
+// let windowsize=window.innerWidth;
+
+// window.addEventListener("resize",()=>{
+//     windowsize=window.innerWidth;
+//     slidebox();
+//     console.log(windowsize);
+// })
+// window.addEventListener("resize",()=>{
+//     adjustCardPositions();
+//     slidebox();
+// })
+// for(i=0; i<5; i++){
+//     cardbox[i].style.left=`${i*33}%`;
+//    }
+// function adjustCardPositions(){
+//     windowsize=window.innerWidth;
+//    if(windowsize>=1200){
+//     for(i=0; i<5; i++){
+//         cardbox[i].style.left=`${i*33}%`;
+//        }
+//    }
+//    else if(windowsize>=992){
+//     for(i=0; i<5; i++){
+//         cardbox[i].style.left=`${i*33}%`;
+//        }
+//    }
+//    else if(windowsize>=768){
+//     for(i=0; i<5; i++){
+//         cardbox[i].style.left=`${i*50}%`;
+//        }
+//    }
+//    else if(windowsize<=576){
+//     for(i=0; i<5; i++){
+//         cardbox[i].style.left=`${i*100}%`;
+//        }
+//    }
+// }
+// // adjustCardPositions();
+
+// function slidebox(){
+//     windowsize = window.innerWidth;
+//     console.log(windowsize);
+//    if(windowsize>=1200){
+//       cardbox.forEach(box => {
+//         box.style.transform=`translateX(-${sum*33}%)`;
+//     });
+//    }
+//    else if(windowsize>=992){
+//         cardbox.forEach(box => {
+//         box.style.transform=`translateX(-${sum*33}%)`;
+//     });
+//    }
+//    else if(windowsize>=768){
+//     cardbox.forEach(box => {
+//     box.style.transform=`translateX(-${sum*50}%)`;
+//    });
+//     }
+//     else if(windowsize<=576){
+//         cardbox.forEach(box => {
+//         box.style.transform=`translateX(-${sum*100}%)`;
+//     });
+//     }
+// }
+// dotbtn.forEach((btn,index)=>{
+//     btn.addEventListener("click",()=>{
+//         sum=index;
+//         slidebox();
+//         console.log(sum);
+//     })
+// })
+
 

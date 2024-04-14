@@ -1,0 +1,123 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+/* navbar............................... ..................................................*/
+
+
+.mynavbar
+{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.329);
+}
+.mynavbar a{
+    color: inherit;
+}
+.mynavbar div a:hover{
+    color: blue;
+}
+.mycol{ 
+    color: #333333d7;
+    font-weight: 500;
+    /* background-color: pink;
+    border:  1px solid black; */
+}
+.enroll-btn{
+    background-color: #FFB013;
+    color: #FFFFFF;
+    width: 40%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-weight: bolder; 
+}
+.baricon{
+    font-size: 25px;
+}
+.icon-col{
+    display: none;
+}
+/*Add menu icon in navbar.......... */ 
+@media (max-width:1200px) {
+    .icon-col{
+        display: block;
+    }
+    .mycol{
+        display: none;
+    }
+}
+/* this is for responsive navbar................*/
+@media screen and (max-width: 1200px) {
+   .mynavbar{
+    height: 5rem;
+    /* border: 2px solid black; */
+   }
+   .logo{
+    height: 20%;
+    width: 20%;
+   }
+}
+  
+  @media screen and (min-width: 1201px) {
+    .mynavbar{
+        height:5rem;
+        /* border: 2px solid black; */
+       }
+    .logo{
+        height: 100%;
+        width: 30%;
+    }
+}
+
+
+ /* footer........................................................................*/
+.myfooter{
+    background-color: #151C2a;
+}
+.myfooter p{
+    color: white;
+}
+.white-color{
+    color: white;
+}
+.text-shadow{
+    text-shadow: 0px 0px 8px red;
+}
+.box-shadow{
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+
+/* contact us page css........................................................................................*/
+.mynavbar div a:hover{
+    color: blue;
+} 
+.title{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.253);
+    text-shadow: 0px 0px 10px #ffb900;
+}
+.icon-blue{
+    color: rgba(0, 0, 255, 0.507);
+}
+.input-color-light{
+    background-color: #f3f7f9;
+    border:  none;
+    border-radius: 5px;
+    outline: none;
+}
+.detail-inp{
+    width: 40%;
+    height: 2rem;
+}
+.submitbtn{
+    height: 2rem;
+    width: 8rem;
+    border: none;
+    outline: none;
+    background-color: #24b1e5;
+    color: wheat;
+}
+.submitbtn:hover{
+    background-color: #FFB013;
+}
